@@ -1,0 +1,23 @@
+# see https://github.com/jamesridgway/attachment-downloader for details
+#
+# mandatory settings
+AD_HOST=imap.example.domain
+AD_USERNAME=john_doe  # single quotes are not allowed
+AD_PASSWORD=s3cret    # single quotes are not allowed
+AD_OUTPUT=/output
+
+# optional settings
+#
+# AD_IMAP_FOLDER=inbox
+# AD_SUBJECT_REGEX=
+# AD_DATE_AFTER=
+# AD_DATE_BEFORE=
+# AD_FILENAME_TEMPLAE=
+# AD_OUTPUT=
+# AD_DELETE=on
+# AD_DELETE_COPY_FOLDER=
+# AD_PORT=
+# AD_UNSECURE=on
+# AD_STARTTLS=on
+
+# AD_SLEEP_SECONDS=   # defaults to 300

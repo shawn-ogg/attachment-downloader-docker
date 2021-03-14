@@ -1,0 +1,13 @@
+version: "2.1"
+services:
+  attachment-downloader:
+    build: .
+    container_name: attachment-downloader
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+    volumes:
+      - ./config:/config
+      - ./output:/output
+    restart: unless-stopped

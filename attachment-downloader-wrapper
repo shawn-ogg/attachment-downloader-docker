@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+
+source /config/attachment-downloader.conf
+
+arguments="\
+${AD_HOST:+--host $AD_HOST} \
+${AD_USERNAME:+--username $AD_USERNAME} \
+${AD_IMAP_FOLDER:+--imap-folder $AD_IMAP_FOLDER} \
+${AD_SUBJECT_REGEX:+--subject-regex $AD_SUBJECT_REGEX} \
+${AD_DATE_AFTER:+--date-after $AD_DATE_AFTER} \
+${AD_DATE_BEFORE:+--date-before $AD_DATE_BEFORE} \
+${AD_FILENAME_TEMPLAE:+--filename-template $AD_FILENAME_TEMPLAE} \
+${AD_OUTPUT:+--output $AD_OUTPUT} \
+${AD_DELETE:+--delete} \
+${AD_DELETE_COPY_FOLDER:+--delete-copy-folder $AD_DELETE_COPY_FOLDER} \
+${AD_PORT:+--port $AD_PORT} \
+${AD_UNSECURE:+--unsecure} \
+${AD_STARTTLS:+--starttls} \
+"
+
+while :
+do
+    echo $AD_PASSWORD | attachment-downloader $arguments
+    sleep ${AD_SLEEP_SECONDS:-300}  # defaults to 5 minutes if not set
+done
