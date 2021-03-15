@@ -11,7 +11,7 @@ ${AD_IMAP_FOLDER:+--imap-folder $AD_IMAP_FOLDER} \
 ${AD_SUBJECT_REGEX:+--subject-regex $AD_SUBJECT_REGEX} \
 ${AD_DATE_AFTER:+--date-after $AD_DATE_AFTER} \
 ${AD_DATE_BEFORE:+--date-before $AD_DATE_BEFORE} \
-${AD_FILENAME_TEMPLAE:+--filename-template $AD_FILENAME_TEMPLAE} \
+${AD_FILENAME_TEMPLATE:+--filename-template $AD_FILENAME_TEMPLATE} \
 ${AD_OUTPUT:+--output $AD_OUTPUT} \
 ${AD_DELETE:+--delete} \
 ${AD_DELETE_COPY_FOLDER:+--delete-copy-folder $AD_DELETE_COPY_FOLDER} \
