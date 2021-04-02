@@ -1,6 +1,6 @@
-FROM python:3
+FROM python:3-alpine
 
 COPY ./attachment-downloader-wrapper /app/
-RUN pip install git+https://github.com/shawn-ogg/attachment-downloader.git
+RUN pip install attachment-downloader
 
 CMD [ "/app/attachment-downloader-wrapper" ]
