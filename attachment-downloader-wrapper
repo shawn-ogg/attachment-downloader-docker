@@ -2,7 +2,8 @@
 
 set -e
 
-source /config/attachment-downloader.conf || true
+config=/config/attachment-downloader.conf
+[ -e "$config" ] && . "$config"
 
 arguments="\
 ${AD_HOST:+--host $AD_HOST} \
